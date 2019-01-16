@@ -19,7 +19,7 @@ import com.jerrycook.MapWebservice.DatabaseHelper.DatabaseHelper;
 import com.jerrycook.MapWebservice.Model.CoalAnnotation;
 
 
-@Path("WebService")
+@Path("Webservice")
 public class Webservice {
 	DatabaseHelper dh = new DatabaseHelper();
 	
@@ -60,6 +60,7 @@ public class Webservice {
 	@Consumes("application/json")
 	public void addAnnot(String inString)
 	{
+		System.out.println("hello addAnnot");
 		Gson gson = new GsonBuilder().create();
 		CoalAnnotation ca = gson.fromJson(inString, CoalAnnotation.class);
 		
